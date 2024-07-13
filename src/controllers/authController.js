@@ -1,5 +1,4 @@
 import logger from "../loaders/logger.js";
-import { forgotSchema, userSchema } from "../middlewares/validation.js";
 import * as AuthService from "../services/authService.js";
 
 const login = async (req, res) => {
@@ -52,8 +51,8 @@ const createUser = async (req, res) => {
 
 const forgot = async (req, res) => {
   try {
-    const valData = forgotSchema.parse(req.body);
-    const user = await AuthService.forgotPassword(valData);
+    // const valData = forgotSchema.parse(req.body);
+    const user = await AuthService.forgotPassword(req.body);
     console.log("user==>", user);
     if (user) {
       res

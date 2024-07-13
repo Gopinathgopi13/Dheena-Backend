@@ -2,7 +2,7 @@ import bcrypt from "bcryptjs/dist/bcrypt.js";
 import { prisma } from "../loaders/prisma.js";
 import crypto from "crypto";
 import { sendEmail, mailTemplate } from "../utils/mailHandler.js";
-import passport from "passport";
+// import passport from "passport";
 import logger from "../loaders/logger.js";
 import config from "../config/config.js";
 import JsonWebTokenError from "jsonwebtoken";
